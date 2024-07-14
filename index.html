@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruleta Aleatoria</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Personas</h2>
+                <div class="input-group mb-3">
+                    <input type="text" id="nameInput" class="form-control" placeholder="Agregar nombre">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" onclick="addName()">Agregar</button>
+                    </div>
+                </div>
+                <ul class="list-group" id="nameList">
+                    <!-- Nombres dinámicos se añadirán aquí -->
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h2>Ruleta</h2>
+                <div class="roulette-container">
+                    <div class="arrow">&#9660;</div>
+                    <div id="roulette" class="roulette">
+                        <div class="half blue">
+                            <span class="number">2</span>
+                        </div>
+                        <div class="half purple">
+                            <span class="number">1</span>
+                        </div>
+                    </div>
+                </div>
+                <button id="spinButton" class="btn btn-primary btn-block" onclick="spin()">Girar Ruleta</button>
+                <div id="rouletteResult" class="mt-3 text-center"></div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <h3>Equipo 1</h3>
+                <p id="team1Count">Cantidad de personas: 0</p>
+                <ul class="list-group" id="team1List">
+                    <!-- Nombres del equipo 1 -->
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h3>Equipo 2</h3>
+                <p id="team2Count">Cantidad de personas: 0</p>
+                <ul class="list-group" id="team2List">
+                    <!-- Nombres del equipo 2 -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
