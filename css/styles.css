@@ -18,8 +18,8 @@ body {
 
 .roulette-container {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 300px; /* Ajusta el tamaño según sea necesario */
+    height: 300px; /* Ajusta el tamaño según sea necesario */
     margin: 0 auto;
 }
 
@@ -35,33 +35,26 @@ body {
 }
 
 .half {
-    width: 100%;
+    width: 50%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 50%;
-    transform-origin: left center;
+    transform-origin: 0% 50%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.blue {
-    background-color: blue;
-    transform: rotate(0deg);
-}
-
-.purple {
-    background-color: purple;
-    transform: rotate(180deg);
-}
-
 .number {
-    color: white;
-    font-size: 36px;
+    color: #C1BC53;
+    font-size: 28px; /* Ajusta el tamaño según sea necesario */
     font-weight: bold;
     position: absolute;
-    left: 20px;
+    transform: translate(100%, -50%) rotate(0deg); /* Ajusta la rotación según sea necesario */
+    top: 50%;
+    left: 60%;
 }
 
 .arrow {
@@ -71,4 +64,28 @@ body {
     transform: translateX(-50%) rotate(0deg);
     font-size: 24px;
     color: red;
+}
+
+.segment {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: polygon(50% 50%, 100% 0, 100% 100%); /* Forma de triángulo para cada segmento */
+    transform-origin: 50% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.blue {
+    background-color: blue;
+    transform: rotate(0deg);
+}
+
+.purple {
+    background-color: purple;
+    transform: rotate(180deg);
 }
