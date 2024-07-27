@@ -3,7 +3,7 @@ let isSpinning = false;
 let teamCounts = [];
 let rouletteType = 'normal';
 let customFields = 2;
-const colorPalette = ['#010101', '#C12A2F', '#DBF5FE', '#008000', '#FFA500', '#FFFF00', '#FFC0CB', '#A52A2A'];
+const colorPalette = ['#010101', '#C12A2F', '#F2F2F2 ', '#008000', '#FFA500', '#FFFF00', '#FFC0CB', '#A52A2A'];
 
 document.getElementById('addNameButton').addEventListener('click', addName);
 document.getElementById('spinButton').addEventListener('click', spin);
